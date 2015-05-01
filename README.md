@@ -47,6 +47,10 @@ Full Usage instructions
     -f, --foreground: run in foreground (default behaviour is to daemonize)
     -h, --help: print this usage message
 
+So for example, to call /home/alt36/script.sh by mounting under /tmp/script/ with a cache life of 2 minutes (120 seconds) and cache size of 10 MB:
+    
+    cgifs.pl /tmp/script /home/alt36/script.sh -l 120 -s 10
+
 Caching
 -------
 [CHI](http://search.cpan.org/~jswartz/CHI-0.59/lib/CHI.pm) is used to cache, unless --nocache is specified. Cached data is stored both on disk (under /tmp/cgifs-cache) and in RAM. The size of the disk-backed cache is unlimited (well, up to the size of your disk!), whilst the RAM-backed cache has a size specified by --cachesize (default: 1MB). Data will stay in the cache for the time specified by --cachelife (default: 60 seconds). 
