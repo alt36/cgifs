@@ -22,7 +22,7 @@ the output will be the same as running "/usr/bin/script.php helloworld": the scr
 
 Because cgifs uses Fuse, you can unmount by running
 
-    fusemount -u /mnt/cgifs
+    fusermount -u /mnt/cgifs
 
 when you're done.
 
