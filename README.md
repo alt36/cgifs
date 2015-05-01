@@ -18,7 +18,7 @@ The mountpoint (first argument) must already exist, and the script (second argum
 
     cat /mnt/cgifs/helloworld
 
-the output will be the same as running "/usr/bin/script.php helloworld": the script is called with a single argument (the name of the file you tried to read), and the contents of the file will be given by whatever script.php prints to stdout (specifically: my $out=`$script $filename`; print $out). 
+the output will be the same as running "/usr/bin/script.php helloworld": the script is called with a single argument (the name of the file you tried to read), and the contents of the file will be given by whatever script.php prints to stdout (specifically, you'll get: my $out=\`$script $filename\`; print $out). 
 
 Because cgifs uses Fuse, you can unmount by running
 
@@ -66,6 +66,8 @@ To remove a file from the cache (which will therefore effectively also lead to a
     rm /mnt/cgifs/filename
 
 If you specify the --nocache option, no caching will be used, and ls will only return entries for . and ..
+
+The cache is cleared when the filesystem is unmounted.
 
 Background/motivation
 ---------------------
