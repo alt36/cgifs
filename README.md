@@ -36,19 +36,20 @@ or you can install the modules from CPAN.
 
 Full Usage instructions
 -----------------------
-cgifs.pl mountpoint scriptname [-l | --cachelife] [-s | --cachesize] [-n | --nocache] [-f | --foreground] [-h | --help]
-mountpoint: directory to mount at
-scriptname: full path to script that will be run
+    cgifs.pl mountpoint scriptname [-l | --cachelife] [-s | --cachesize] [-n | --nocache] [-f | --foreground] [-h | --help]
 
--l, --cachelife: cache lifetime, in seconds (default 60 seconds)
--s, --cachesize: cache size, in MB (default: 1)
--n, --nocache: don't use cache
--f, --foreground: run in foreground (default behaviour is to daemonize)
--h, --help: print this usage message
+    mountpoint: directory to mount at
+    scriptname: full path to script that will be run
+
+    -l, --cachelife: cache lifetime, in seconds (default 60 seconds)
+    -s, --cachesize: cache size, in MB (default: 1)
+    -n, --nocache: don't use cache
+    -f, --foreground: run in foreground (default behaviour is to daemonize)
+    -h, --help: print this usage message
 
 Caching
 -------
-[CHI]((http://search.cpan.org/~jswartz/CHI-0.59/lib/CHI.pm) is used to cache, unless --nocache is specified. Cached data is stored both on disk (under /tmp/cgifs-cache) and in RAM. The size of the disk-backed cache is unlimited (well, up to the size of your disk!), whilst the RAM-backed cache has a size specified by --cachesize (default: 1MB). Data will stay in the cache for the time specified by --cachelife (default: 60 seconds). 
+[CHI](http://search.cpan.org/~jswartz/CHI-0.59/lib/CHI.pm) is used to cache, unless --nocache is specified. Cached data is stored both on disk (under /tmp/cgifs-cache) and in RAM. The size of the disk-backed cache is unlimited (well, up to the size of your disk!), whilst the RAM-backed cache has a size specified by --cachesize (default: 1MB). Data will stay in the cache for the time specified by --cachelife (default: 60 seconds). 
 
 To see all currently cached objects:
 
